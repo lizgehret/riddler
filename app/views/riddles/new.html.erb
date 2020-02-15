@@ -1,0 +1,8 @@
+<h1>Add Your Riddle Here</h1>
+<%= simple_form_for @riddle do |f| %>
+  <%= f.input :riddle %>
+  <%= f.input :answer %>
+  <%= f.input :riddler %>
+  <br />
+  <%= f.submit 'Riddle Me This', class: 'btn btn-danger' %>
+<% end %>

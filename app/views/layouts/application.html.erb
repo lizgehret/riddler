@@ -12,15 +12,22 @@
   <body>
     <header class="row">
       <div class="col-3">
-        <div class="circle">
-          ???
-        </div>
+        <%= link_to root_path, class: 'logo' do %>
+          <div class="circle">
+            <br />
+            Riddle
+            <br />
+            Me
+            <br />
+            This
+          </div>
+        <% end %>
       </div>
       <div class="col-4 slogan">
         Storing your favorite riddles and questions since 2020!
       </div>
       <div class="col-5 links">
-        <%= link_to 'Contribute', '#' %>
+        <%= link_to 'Contribute', new_riddle_path %>
       </div>
     </header>
 
@@ -28,6 +35,19 @@
 
     <br class="clear" />
 
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <%= link_to 'Give me more riddles!!', root_path, class: 'next-quote' %>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>
